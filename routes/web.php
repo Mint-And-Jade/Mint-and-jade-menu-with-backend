@@ -1,7 +1,14 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Models\Item;
 use Inertia\Inertia;
+use App\Models\section;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ItemController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SectionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,5 +22,36 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Home');
+    return Inertia::render('Home',[
+        'items' => Item::all(),
+        'categories' => Category::all(),
+        'sections' => section::all()
+    ]);
 });
+
+Route::get('/login', [AuthController::class, 'page']);
+Route::post('login', [AuthController::class, 'login']);
+
+
+Route::middleware('admin')->group(function() {
+    Route::get('/dashboard', function() {
+        return Inertia::render('Dashboard', [
+            'categories' => Category::all(),
+            'items' => Item::all(),
+            'sections' => section::all()
+        ]);
+    });
+
+    Route::post('add/item', [ItemController::class, 'add']);
+    Route::patch('/edit/item', [ItemController::class, 'update']);
+    Route::delete('item/delete/{id}',[ItemController::class, 'delete']);
+
+    Route::post('category/add', [CategoryController::class, 'add']);
+    Route::patch('category/update', [CategoryController::class, 'update']);
+    Route::delete('category/delete/{id}', [CategoryController::class, 'delete']);
+
+    Route::post('section/add', [SectionController::class, 'add']);
+    Route::patch('section/update', [SectionController::class, 'update']);
+    Route::delete('section/delete/{id}', [SectionController::class, 'delete']);
+});
+

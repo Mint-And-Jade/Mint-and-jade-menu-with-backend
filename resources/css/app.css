@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.header-bg {
+    background-image: url('../../public/img/head-background.png');
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
