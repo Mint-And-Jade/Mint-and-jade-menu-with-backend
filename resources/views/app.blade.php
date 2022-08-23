@@ -5,15 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mint And Jade</title>
-    {{-- <Link rel="stylesheet" href="https://mintandjade1.herokuapp.com/build/assets/app.bb53b61b.css"></Link>
-    <script type="module" src="https://mintandjade1.herokuapp.com/build/assets/app.ff3fd49f.js"></script> --}}
-
-<<<<<<< HEAD
-    @vite('resources/js/app.js')
-
-=======
-    <script src="https://blogy-new.herokuapp.com/js/app.js"></script>
->>>>>>> 680cfe7 (Update app.blade.php)
+    <link rel="stylesheet" href="https://mintandjade1.herokuapp.com/build/assets/app.1d621847.css" />
+    <script type="module" src="https://mintandjade1.herokuapp.com/build/assets/app.0727cc79.js"></script>
+    {{-- @vite('resources/js/app.js') --}}
     @inertiaHead
 </head>
 <body>
