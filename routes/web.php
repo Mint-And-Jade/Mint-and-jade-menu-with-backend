@@ -21,6 +21,10 @@ use App\Http\Controllers\SectionController;
 |
 */
 
+if (App::environment('production')) {
+    URL::forceScheme('https');
+}
+
 Route::get('/', function () {
     return Inertia::render('Home',[
         'items' => Item::all(),
