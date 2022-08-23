@@ -8,8 +8,12 @@
     {{-- <Link rel="stylesheet" href="https://mintandjade1.herokuapp.com/build/assets/app.bb53b61b.css"></Link>
     <script type="module" src="https://mintandjade1.herokuapp.com/build/assets/app.ff3fd49f.js"></script> --}}
 
+<<<<<<< HEAD
     @vite('resources/js/app.js')
 
+=======
+    <script src="https://blogy-new.herokuapp.com/js/app.js"></script>
+>>>>>>> 680cfe7 (Update app.blade.php)
     @inertiaHead
 </head>
 <body>
