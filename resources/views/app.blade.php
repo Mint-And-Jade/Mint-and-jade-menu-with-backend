@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-    @vite('resources/js/app.js')
+    <script src="../js/app.js"></script>
     @inertiaHead
 </head>
 <body>
