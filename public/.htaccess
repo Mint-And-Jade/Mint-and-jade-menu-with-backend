@@ -18,4 +18,8 @@
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
+
+    # Handle ssl
+    RewriteCond %{SERVER_PORT} 80
+    RewriteRule ^(.*)$ https://mintandjade.herokuapp.com/ [R,L]
 </IfModule>
