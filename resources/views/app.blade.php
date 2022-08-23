@@ -7,7 +7,7 @@
     <title>Mint And Jade</title>
 
     {{-- @vite('resources/js/app.js') --}}
-    <script src="https://mintandjade1.herokuapp.com/resources/js/app.js"></script>
+    <script src="resources/js/app.js"></script>
     @inertiaHead
 </head>
 <body>
