@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mint And Jade</title>
 
-    @vite('resources/js/app.js')
+    {{-- @vite('resources/js/app.js') --}}
+    <script src="https://mintandjade1.herokuapp.com/resources/js/app.js"></script>
     @inertiaHead
 </head>
 <body>
