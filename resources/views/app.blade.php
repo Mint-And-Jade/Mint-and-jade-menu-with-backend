@@ -9,8 +9,6 @@
     <script type="module" src="https://mintandjade1.herokuapp.com/build/assets/app.ff3fd49f.js"></script> --}}
 
     @vite('resources/js/app.js')
-
-
     @inertiaHead
 </head>
 <body>
