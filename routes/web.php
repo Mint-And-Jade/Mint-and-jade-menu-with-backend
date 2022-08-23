@@ -1,14 +1,15 @@
 <?php
 
-use App\Http\Controllers\AuthController;
 use App\Models\Item;
+use App\Models\User;
 use Inertia\Inertia;
 use App\Models\section;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ItemController;
-use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SectionController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,13 @@ Route::get('/', function () {
 Route::get('/login', [AuthController::class, 'page']);
 Route::post('login', [AuthController::class, 'login']);
 
+Route::get('/user', function(){
+    User::create([
+        'name' => 'admin',
+        'email' => 'admin',
+        'password' => '123',
+    ]);
+});
 
 Route::middleware('admin')->group(function() {
     Route::get('/dashboard', function() {
