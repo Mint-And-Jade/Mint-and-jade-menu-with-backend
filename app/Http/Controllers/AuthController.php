@@ -26,6 +26,6 @@ class AuthController extends Controller
         } else {
             return dd('Email or Password incorrect');
         }
-        return redirect('./dashboard');
+        return redirect('./dashboard', 302, null, true);
     }
 }
