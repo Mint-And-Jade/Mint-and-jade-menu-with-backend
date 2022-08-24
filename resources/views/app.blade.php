@@ -7,6 +7,7 @@
     <title>Mint And Jade</title>
     <link rel="stylesheet" href="https://mintandjade1.herokuapp.com/build/assets/app.1d621847.css" />
     <script type="module" src="https://mintandjade1.herokuapp.com/build/assets/app.0727cc79.js"></script>
+
     {{-- @vite('resources/js/app.js') --}}
     @inertiaHead
 </head>
