@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Header />
+        <Header :isAuth="isAuth"/>
         <Main :items="items" :sections="sections" :categories="categories"/>
     </div>
 </template>
@@ -18,6 +18,7 @@ export default {
         sections: Array,
         categories: Array,
         items: Array,
+        isAuth: Boolean,
     }
 }
 </script>
