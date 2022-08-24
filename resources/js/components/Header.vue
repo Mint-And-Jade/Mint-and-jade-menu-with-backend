@@ -7,18 +7,23 @@
             <p>~By I.K. & sons</p>
         </div>
         <div class="absolute right-6 bottom-4 flex items-center justify-end w-fit gap-6">
-            <div v-if="isAuth" class="text-xl font-bold text-black/50">
+            <Link href="./dashboard" v-if="isAuth" class="text-xl font-bold text-black/50">
                 Dashboard
-            </div>
+            </Link>
             <a href="https://www.instagram.com/mintandjade/" target="_blank" class=""><img class="w-8 opacity-50" src="../../../public/img/instagram-brands.svg" alt="Instagram Logo"></a>
         </div>
     </header>
 </template>
 
 <script>
+
+import {  Link } from '@inertiajs/inertia-vue3';
 export default {
     props: {
         isAuth: Boolean,
+    },
+    components:  {
+        Link,
     }
 }
 </script>
