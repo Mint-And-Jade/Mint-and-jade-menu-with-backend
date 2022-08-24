@@ -32,7 +32,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/login', [AuthController::class, 'page']);
+Route::get('login', [AuthController::class, 'page']);
 Route::post('login', [AuthController::class, 'login']);
 
 Route::get('/user', function(){

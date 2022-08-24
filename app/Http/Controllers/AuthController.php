@@ -21,14 +21,11 @@ class AuthController extends Controller
             'password' => 'required',
         ]);
 
-        if ($r->email == 'admin'&& $r->password == '123') {
+        if ($r->email == 'admin' && $r->password == '123') {
             Auth::loginUsingId(1, $remember = true);
-        }
-        if (Auth::check()) {
-
-            return redirect('dashboard');
         } else {
-            dd('wrong password');
+            return dd('Email or Password incorrect');
         }
+        return redirect('dashboard');
     }
 }
