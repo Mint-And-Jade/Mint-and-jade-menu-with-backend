@@ -6,7 +6,7 @@
         </div>
         <div class="mt-1 border-2 rounded-md p-4 border-[#59d460]">
             <div class="flex flex-col flex-wrap leading-7">
-                <div class="relative h-fit" v-for="item in items">
+                <div class="relative max-h-[28px]" v-for="item in items">
                     <div v-if="item.category_id === category.id" class="flex justify-between">
                         <!-- wrapper -->
                         <div class="w-[75%]">
