@@ -69,5 +69,5 @@ Route::middleware('admin')->group(function() {
 
 Route::get('logout', function() {
     Auth::logout();
-    return Inertia::render('Home');
+    return redirect('/', 302, [], true);
 });
