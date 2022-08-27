@@ -5,6 +5,7 @@ use App\Models\User;
 use Inertia\Inertia;
 use App\Models\section;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ItemController;
@@ -28,11 +29,12 @@ Route::get('/', function () {
     return Inertia::render('Home',[
         'items' => Item::all(),
         'categories' => Category::all(),
-        'sections' => section::all()
+        'sections' => section::all(),
+        'isAuth' => Auth::check()
     ]);
 });
 
-Route::get('/login', [AuthController::class, 'page']);
+Route::get('login', [AuthController::class, 'page']);
 Route::post('login', [AuthController::class, 'login']);
 
 Route::get('/user', function(){
@@ -65,3 +67,7 @@ Route::middleware('admin')->group(function() {
     Route::delete('section/delete/{id}', [SectionController::class, 'delete']);
 });
 
+Route::get('logout', function() {
+    Auth::logout();
+    return redirect('/', 302, [], true);
+});
