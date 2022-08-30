@@ -13,7 +13,7 @@ class CategoryController extends Controller
             'categoryName' => 'required',
             'section_id' => 'required'
         ]);
-        
+
         Category::create([
             'section_id' => $request->section_id,
             'name' => $request->categoryName,
@@ -35,6 +35,7 @@ class CategoryController extends Controller
 
         if ($category) {
             $category->name = $request->name;
+            $category->note = $request->note;
             $category->save();
         } else {
             dd('did not find the category');

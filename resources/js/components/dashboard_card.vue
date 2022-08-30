@@ -12,10 +12,10 @@
                 <div class="grid grid-rows-1 grid-cols-[50%_30%_1fr] mb-4" v-if="item.category_id === category.id">
                     <div class="relative">
                         <img src="../../../public/img/dot.svg" alt="" class="w-[8px] rounded-full absolute top-[.6rem]">
-                        <p class="ml-5"> {{ item.name }}</p>
+                        <p class="ml-5"> {{  item.name  }}</p>
                     </div>
                     <div class="">
-                        {{ item.price }}&nbsp;LL
+                        {{  item.price  }}&nbsp;LL
                     </div>
                     <div class="flex justify-center">
                         <Dashboard_Edit_modal_btn @clickedEdit="clickedEdit" :item="item" />
@@ -29,6 +29,9 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="mt-4 italic" v-if="category.note">
+            Note: {{  category.note  }}
         </div>
     </div>
 </template>
