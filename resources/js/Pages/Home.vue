@@ -12,7 +12,7 @@ import Main from '../components/Main.vue'
 export default {
     components: {
         Header,
-        Main
+        Main,
     },
     props: {
         sections: Array,
