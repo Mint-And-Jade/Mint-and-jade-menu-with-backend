@@ -4,7 +4,7 @@
         <div class="row-start-1 col-start-2 flex items-center justify-center flex-col">
             <h1 class="text-5xl font-serif mb-3">Mint & Jade</h1>
             <h2 class="mb-5">Open from 9 AM till 1 AM</h2>
-            <p>~By I.K. & sons</p>
+            <p>~By Y.K</p>
         </div>
         <div class="absolute right-6 bottom-4 flex items-center justify-end w-fit gap-6">
             <Link href="./dashboard" v-if="isAuth" class="text-xl font-bold text-black/50">
